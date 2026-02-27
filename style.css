@@ -1,0 +1,93 @@
+/* กำหนดฟอนต์และพื้นหลัง */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* พื้นหลังสีเทาอ่อน สบายตา */
+    color: #333;
+}
+
+/* ส่วนหัวและเมนู */
+header {
+    background-color: #4A90E2; /* สีฟ้าสะอาดตา */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* ตัวอักษรสีขาว */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนเนื้อหา */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 180px; /* ปรับขนาดความกว้างรูป */
+    height: auto; /* ให้ความสูงปรับอัตโนมัติ */
+    float: left; /* ให้รูปลอยไปทางซ้าย */
+    margin-right: 20px; /* เพิ่มช่องว่างด้านขวา */
+    margin-bottom: 10px; /* เพิ่มช่องว่างด้านล่าง */
+    border-radius: 10px; /* ทำขอบมน (ใช้ 50% ถ้าอยากให้เป็นวงกลม) */
+    border: 3px solid #4A90E2;
+}
+
+/* ป้องกันไม่ให้เนื้อหาส่วนล่างไหลขึ้นมาปน */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* กล่องรวมรูปภาพงานอดิเรก */
+.hobby-gallery {
+    display: flex; /* เรียงต่อกันในแนวนอน */
+    flex-wrap: wrap; /* ถ้ารูปเยอะให้ขึ้นบรรทัดใหม่ */
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 20px;
+}
+
+/* แต่ละรูปและคำบรรยาย */
+.hobby-item {
+    width: 200px; /* กำหนดความกว้าง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.hobby-item img {
+    width: 100%; /* เต็มกล่อง */
+    height: 150px; /* สูงเท่ากันทุกภาพ */
+    object-fit: cover; /* ตัดส่วนเกินไม่ให้ภาพเบี้ยว */
+    border-radius: 8px; /* ขอบมน */
+    border: 2px solid #ddd;
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #f38b8b;
+    background-color: #834545;
+    margin-top: 30px;
+}
